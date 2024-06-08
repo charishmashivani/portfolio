@@ -56,12 +56,16 @@ body {
   width: 100%;
   justify-content: space-between;
   height: 100vh;
-  background: url(./bbbg.jpeg) no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   padding: 70px 10% 0;
+}
+
+.per{
+  background: url(./bg.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .home-content {
@@ -141,6 +145,7 @@ body {
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+  margin-bottom: 100px;
 }
 
 .btn-box:hover {
@@ -153,6 +158,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .about-img img {
@@ -169,11 +175,12 @@ body {
   height: 150px; /* Set the desired height */
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover; /* Ensures the image covers the container without distortion */
-  border: 2px solid #ccc; /* Optional: adds a border around the avatar */
+  border: 2px solid #0ef; /* Optional: adds a border around the avatar */
 }
 
 .about-text h2 {
   font-size: 60px;
+  margin-top: 100px;
 }
 
 .about-text h2 span {
@@ -193,6 +200,8 @@ body {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
+  text-align: justify;
+  margin-right: 50px;
 }
 
 #services {
@@ -529,13 +538,16 @@ section {
 .main-text{
   padding-top: 130px;
   margin-top: 200px;
+  width: 1200px;
 }
 
 .main-text h2{
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1;
   text-align: center;
   margin-bottom: 20px;
+  margin-left: 180px;
+  text-decoration: underline;
 }
 
 .main-text h2 span{
@@ -548,8 +560,8 @@ section {
 
 .portfolio-content{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(359px, auto));
-  margin-left: 200px;
+  grid-template-columns: repeat(auto-fit, minmax(277px, auto));
+  margin-left: 150px;
 }
 
 .row{
@@ -557,6 +569,7 @@ section {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .row img{
@@ -586,6 +599,7 @@ section {
 
 .layer h5{
   color: #000;
+  background-color: aliceblue;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
