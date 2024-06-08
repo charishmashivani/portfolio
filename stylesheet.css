@@ -513,7 +513,7 @@ section {
   opacity: 0;
 }
 
-.radial-bar .text{
+.radial-bar  .text{
   width: 100%;
   position: absolute;
   text-align: center;
