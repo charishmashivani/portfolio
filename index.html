@@ -244,13 +244,13 @@
             </div>
         </div>
 
-        <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter your Name" required>
-                <input type="email" placeholder="Enter your email" required>
+        <div class="contact-form" id="contact-form">
+            <form onsubmit="sendEmail(); reset(); return False;">
+                <input type="text" id="name" placeholder="Enter your Name" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
 
-                <input type="" placeholder="Enter your subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter your message" required></textarea>
+                <input type="text" id="subject" placeholder="Enter your subject">
+                <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter your message" required></textarea>
                 <input type="submit" value="submit" class="send">
             </form>
         </div>
@@ -260,6 +260,10 @@
         <p>Developed by Charishma Shivani &copy; 2024</p>
     </div>
     <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+    <script src="main.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
