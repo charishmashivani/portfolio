@@ -293,10 +293,16 @@ section {
 }
 
 .container1 {
-  width: 600px;
+  width: 500px;
   height: 500px;
-  padding: 75px 90px;
-  margin-left: 120px;
+  padding: 20px;
+  margin-left: 100px;
+}
+
+#skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2px;
 }
 
 .heading1 {
