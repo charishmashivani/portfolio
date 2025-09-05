@@ -301,26 +301,25 @@ section {
 
 /* Section Styling */
 .skills {
-  background: #0f111a;
+  background: #0f111a; /* dark background */
   color: #fff;
-  text-align: center;
+  text-align: center; /* center-align text */
   padding: 3rem 1.5rem;
   font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically if needed */
 }
 
-.skills h2 {
+.skills .sub-title {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.skills h2 span {
-  color: #ff5722; /* Accent color */
+  margin-bottom: 2rem;
 }
 
-.skills p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: #bbb;
-  font-size: 0.95rem;
+.skills .sub-title span {
+  color: #ff5722; /* accent color */
 }
 
 /* Grid Layout */
@@ -328,6 +327,8 @@ section {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 1100px; /* keeps grid centered */
 }
 
 /* Skill Card */
@@ -350,43 +351,39 @@ section {
   margin-bottom: 1rem;
 }
 
-.skill-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #fff;
-}
-
-/* Progress Bar */
 .progress-bar {
   background: #222;
   border-radius: 20px;
   overflow: hidden;
-  height: 20px;
+  height: 30px;
+  margin-top: 1rem;
 }
 
 .progress {
   height: 100%;
   background: #ff5722;
-  color: #fff;
-  font-size: 0.85rem;
-  line-height: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 20px;
 }
 
-/* RESPONSIVE BREAKPOINTS */
+.progress h3 {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+}
 
-/* Tablets */
+/* RESPONSIVE BREAKPOINTS */
 @media (min-width: 600px) {
   .skill-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Desktops */
 @media (min-width: 1024px) {
   .skill-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
