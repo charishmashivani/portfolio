@@ -299,7 +299,97 @@ section {
   margin-left: 100px;
 }
 
-/* Section Styling */
+/*experience Section Styling */
+.experience {
+  background: #0f111a;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 20px;
+  max-width: 900px;
+  text-align: left;
+  border-left: 2px solid #ff5722;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: #ff5722;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.timeline-content {
+  background: #151821;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 span {
+  color: #bbb;
+  font-weight: normal;
+}
+
+.timeline-content .date {
+  font-size: 0.9rem;
+  color: #ff5722;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+}
+/* ends */
+
+/* Skills Section Styling */
 .skills {
   background: #121111; /* dark background */
   color: #fff;
