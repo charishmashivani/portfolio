@@ -314,7 +314,7 @@ section {
   padding-left: 20px;
   max-width: 900px;
   text-align: left;
-  border-left: 2px solid #ff5722;
+  border-left: 2px solid #0ef;
 }
 
 .timeline-item {
@@ -329,7 +329,7 @@ section {
   top: 8px;
   width: 20px;
   height: 20px;
-  background: #ff5722;
+  background: #0ef;
   border-radius: 50%;
   border: 2px solid #fff;
 }
@@ -353,7 +353,7 @@ section {
 
 .timeline-content .date {
   font-size: 0.9rem;
-  color: #ff5722;
+  color: #0ef;
   display: block;
   margin-bottom: 0.8rem;
 }
@@ -384,6 +384,70 @@ section {
 
   .timeline-item::before {
     display: none;
+  }
+}
+/* ends */
+
+/*achievements Section Styling */
+.achievements {
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Grid Layout */
+.achievement-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.achievement-card {
+  background: #151821;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.achievement-card .date {
+  font-size: 0.9rem;
+  color: #0ef;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .achievement-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /* ends */
