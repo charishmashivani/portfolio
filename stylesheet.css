@@ -301,7 +301,7 @@ section {
 
 /* Section Styling */
 .skills {
-  background: #0f111a; /* dark background */
+  background: #000000; /* dark background */
   color: #fff;
   text-align: center; /* center-align text */
   padding: 3rem 1.5rem;
@@ -314,12 +314,12 @@ section {
 }
 
 .skills .sub-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 60px;
+  margin-bottom: 70px;
 }
 
 .skills .sub-title span {
-  color: #ff5722; /* accent color */
+  color: #0ef; /* accent color */
 }
 
 /* Grid Layout */
@@ -346,8 +346,8 @@ section {
 }
 
 .skill-card img {
-  width: 50px;
-  height: 50px;
+  max-width: 100px;
+  max-height: 100px;
   margin-bottom: 1rem;
 }
 
