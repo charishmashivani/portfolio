@@ -452,9 +452,83 @@ section {
 }
 /* ends */
 
+/* Projects Section Styling */
+.projects {
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Project List Layout */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Individual Project */
+.project-item {
+  background: #151821;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+.project-info {
+  text-align: left;
+  max-width: 90%;
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.project-item a {
+  font-size: 1.5rem;
+  color: #0ef;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.project-item a:hover {
+  color: #0effe0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-item a {
+    margin-top: 1rem;
+  }
+}
+/* ends */
+
 /* Skills Section Styling */
 .skills {
-  background: #121111; /* dark background */
   color: #fff;
   text-align: center; /* center-align text */
   padding: 3rem 1.5rem;
@@ -602,8 +676,7 @@ section {
 }
 
 .main-text{
-  padding-top: 130px;
-  margin-top: 200px;
+  margin-top: 30px;
   width: 1200px;
 }
 
