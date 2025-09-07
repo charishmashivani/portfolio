@@ -1,10 +1,37 @@
-var typed = new Typed(".text", {
-    strings: ["Software Developer Engineer"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
+
+  const words = ["Software Developer", "Problem Solver", "Tech Enthusiast"];
+  let i = 0;
+  let j = 0;
+  let currentWord = "";
+  let isDeleting = false;
+
+  function type() {
+    const typingElement = document.querySelector(".typing");
+    if (!typingElement) return;
+
+    if (i < words.length) {
+      if (!isDeleting && j <= words[i].length) {
+        currentWord = words[i].substring(0, j++);
+      } else if (isDeleting && j >= 0) {
+        currentWord = words[i].substring(0, j--);
+      }
+
+      typingElement.textContent = currentWord;
+
+      if (!isDeleting && j === words[i].length) {
+        isDeleting = true;
+        setTimeout(type, 1200); // pause before deleting
+        return;
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i++;
+        if (i === words.length) i = 0;
+      }
+    }
+    setTimeout(type, isDeleting ? 80 : 150);
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
 
 document.addEventListener('DOMContentLoaded', () => {
     // Animate horizontal bars

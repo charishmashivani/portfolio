@@ -599,37 +599,39 @@ section {
 
 /* Home Section */
 .home {
-  background: #0f111a;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap;
   gap: 2rem;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
 }
 
-/* Left Content */
+/* Content */
 .home-content {
   flex: 1;
   max-width: 600px;
+  animation: slideInLeft 1s ease;
 }
 
 .home-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 .home-content h1 span {
-  color: #ff5722;
+  color: #0ef;
 }
 
 .home-content .tagline {
   font-size: 1.3rem;
-  font-weight: 400;
   margin-bottom: 1rem;
-  color: #ffa07a;
+  color: #a0f1f7;
+  min-height: 2rem; /* prevents layout shift during typing */
 }
 
 .home-content p {
@@ -654,38 +656,63 @@ section {
 }
 
 .btn {
-  background: #ff5722;
+  background: #0ef;
   color: #fff;
 }
 
 .btn:hover {
-  background: #ffa07a;
+  background: #0ef;
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-  border: 2px solid #ff5722;
-  color: #ff5722;
+  border: 2px solid #0ef;
+  color: #0ef;
 }
 
 .btn-outline:hover {
-  background: #ff5722;
+  background: #0ef;
   color: #fff;
+  transform: translateY(-2px);
 }
 
-/* Right Image */
+/* Profile Image */
 .home-image {
   flex: 1;
   display: flex;
   justify-content: center;
+  animation: slideInRight 1s ease;
 }
 
 .home-image img {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #ff5722;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: 4px solid #0ef;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideInLeft {
+  from {transform: translateX(-50px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes slideInRight {
+  from {transform: translateX(50px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes float {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
 }
 
 /* Responsive */
@@ -697,12 +724,14 @@ section {
 
   .home-content {
     max-width: 100%;
+    animation: fadeIn 1.2s ease;
   }
 
   .home-buttons {
     justify-content: center;
   }
 }
+
 /* ends */
 
 /* Skills Section Styling */
@@ -766,7 +795,7 @@ section {
 
 .progress {
   height: 100%;
-  background: #ff5722;
+  background: #0ef;
   display: flex;
   align-items: center;
   justify-content: center;
