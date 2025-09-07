@@ -131,13 +131,6 @@ html {
   padding: 70px 10% 0;
 }
 
-.per{
-  background: url(./bg.webp) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 .home-content {
   max-width: 600px;
 }
