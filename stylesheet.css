@@ -445,47 +445,81 @@ section {
 /* ends */
 
 /* Home Section */
+/* Home Section */
 .home {
+  background: linear-gradient(135deg, #0f111a, #1a1d29);
+  position: relative;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap;
   gap: 2rem;
   min-height: 100vh;
-  animation: fadeIn 1s ease-in;
+  overflow: hidden;
+}
+
+/* Decorative Background Blobs */
+.home::before,
+.home::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: 0;
+}
+.home::before {
+  width: 300px;
+  height: 300px;
+  background: #0ef;
+  top: -100px;
+  left: -100px;
+}
+.home::after {
+  width: 250px;
+  height: 250px;
+  background: #0effe0;
+  bottom: -80px;
+  right: -80px;
 }
 
 /* Content */
 .home-content {
   flex: 1;
   max-width: 600px;
+  position: relative;
+  z-index: 1;
   animation: slideInLeft 1s ease;
 }
 
 .home-content h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .home-content h1 span {
-  color: #0ef;
+  background: linear-gradient(90deg, #0ef, #0effe0);
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 .home-content .tagline {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #a0f1f7;
-  min-height: 2rem; /* prevents layout shift during typing */
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: #0ef;
+  min-height: 2rem;
 }
 
 .home-content p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #ddd;
-  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 2.5rem;
 }
 
 /* Buttons */
@@ -495,32 +529,35 @@ section {
 }
 
 .btn, .btn-outline {
-  padding: 0.8rem 1.5rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .btn {
-  background: #0ef;
+  background: linear-gradient(90deg, #0ef, #0effef);
   color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
 }
 
 .btn:hover {
-  background: #0ef;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
 }
 
 .btn-outline {
   border: 2px solid #0ef;
   color: #0ef;
+  background: transparent;
 }
 
 .btn-outline:hover {
   background: #0ef;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* Profile Image */
@@ -528,25 +565,22 @@ section {
   flex: 1;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
   animation: slideInRight 1s ease;
 }
 
 .home-image img {
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #0ef;
-  box-shadow: 0 6px 15px #00000066;
+  border: 5px solid #0ef;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
   animation: float 4s ease-in-out infinite;
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
 @keyframes slideInLeft {
   from {transform: translateX(-50px); opacity: 0;}
   to {transform: translateX(0); opacity: 1;}
@@ -559,7 +593,7 @@ section {
 
 @keyframes float {
   0%, 100% {transform: translateY(0);}
-  50% {transform: translateY(-10px);}
+  50% {transform: translateY(-12px);}
 }
 
 /* Responsive */
@@ -567,11 +601,11 @@ section {
   .home {
     flex-direction: column-reverse;
     text-align: center;
+    padding: 4rem 1.5rem;
   }
 
-  .home-content {
-    max-width: 100%;
-    animation: fadeIn 1.2s ease;
+  .home-content h1 {
+    font-size: 2.5rem;
   }
 
   .home-buttons {
