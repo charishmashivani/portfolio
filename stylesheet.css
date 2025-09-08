@@ -447,7 +447,6 @@ section {
 /* Home Section */
 /* Home Section */
 .home {
-  background: linear-gradient(135deg, #0f111a, #1a1d29);
   position: relative;
   color: #fff;
   display: flex;
@@ -502,7 +501,6 @@ section {
 }
 
 .home-content h1 span {
-  background: linear-gradient(90deg, #0ef, #0effe0);
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
