@@ -445,7 +445,6 @@ section {
 /* ends */
 
 /* Home Section */
-/* Home Section */
 .home {
   position: relative;
   color: #fff;
@@ -501,7 +500,7 @@ section {
 }
 
 .home-content h1 span {
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -537,13 +536,12 @@ section {
 
 .btn {
   background: linear-gradient(90deg, #0ef, #0effef);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+  color: #000;
 }
 
 .btn:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+  box-shadow: 0 6px 20px #0ef;
 }
 
 .btn-outline {
